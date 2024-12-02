@@ -42,11 +42,13 @@ def parse_page(url):
         print("No more titles found!")
         return False  # Stop pagination
 
+    print(title_results)
     # Extract data
     for item in title_results:
         movieName.append(item.get('titleText', 'Unknown'))
         movieYear.append(item.get('releaseYear', 'Unknown'))
         rating.append(item.get('ratingSummary', {}).get('aggregateRating', 'Unknown'))
+        metacritic_scores.append(item.get('metascore', 'Unknown'))
         runtime = item.get('runtime', 'Unknown')
         if isinstance(runtime, int):  # If runtime is an integer (seconds)
             runtime_minutes = runtime // 60
@@ -73,13 +75,16 @@ for _ in range(max_pages):
     time.sleep(0.1)  # To avoid overwhelming the server
 '''
 
-for name, year, rate, run, num in zip(movieName, movieYear, rating, runtimes, number_of_ratings):
-    print(f"Title: {name}, Year: {year}, Rating: {rate}, Runtime: {run}, Number of Ratings: {num}")
+parse_page(url)
+
+for name, year, rate, score, run, num in zip(movieName, movieYear, rating, metacritic_scores, runtimes, number_of_ratings):
+    print(f"Title: {name}, Year: {year}, Rating: {rate}, Metascore: {score}, Runtime: {run}, Number of Ratings: {num}")
 
 df = pd.DataFrame({
     'Title': movieName,
     'Year': movieYear,
     'Rating': rating,
+    'MetaScore': metacritic_scores,
     'Runtime': runtimes,
     'Votes': number_of_ratings
 })
