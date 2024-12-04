@@ -81,4 +81,4 @@ def get_dataframes(imdb, metacritic, rotten):
 
     return imdb_df, metacritic_df, rotten_df
 
-get_dataframes('imdb_movies.csv', 'metacritic_movies.csv', 'rt_movies.csv')
+# get_dataframes('imdb_movies.csv', 'metacritic_movies.csv', 'rt_movies.csv')
