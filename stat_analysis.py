@@ -95,7 +95,7 @@ def plot_ratings_distribution(merged_data):
     
     # bar plot
     plt.figure(figsize=(10, 6))
-    sns.barplot(x='Platform', y='Rating', data=ratings_melted, errorbar='sd', hue='Platform', estimator='mean', palette='Set2', legend=False)
+    sns.barplot(x='Platform', y='Rating', data=ratings_melted, errorbar='sd', hue='Platform', estimator='mean', palette='Set2')
     plt.title('Average Rating by Review Platform', fontsize=16)
     plt.xlabel('Review Platform', fontsize=12)
     plt.ylabel('Average Rating Score', fontsize=12)
