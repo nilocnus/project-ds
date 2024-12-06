@@ -1,14 +1,13 @@
 import numpy as np
 import pandas as pd
 import data_cleaner
-import matplotlib.pyplot as plt
 import sys
 
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
-from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import StandardScaler
+# from sklearn.preprocessing import StandardScaler
 
 def success(x):
     return 'positive' if x>=60 else 'negative'

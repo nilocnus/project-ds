@@ -9,6 +9,7 @@ This project will focus on three difference sources that displays metadata about
 - **Python 3.0 or HIGHER**
 - **Numpy** - Python module required as a dependency for pandas
 - **Pandas** - Python module required for dataframe work
+- **sklearn** - Python module required for machine learning analysis
 
 Addtionally, you may clone the repository onto your own directory. Make sure that both `rt_movies.csv` and `imdb_uncleaned.csv` are present, as they are the raw datasets that we're working with in this project.
 
@@ -23,3 +24,13 @@ To run the file, type `python3 imdb_to_meta.py imdb_uncleaned.csv` if you're usi
 ## Step 2 - Running Data Science Analysis
 
 Now, there should be a total of 3 `.csv` files within the repository, and they should be named `imdb_movies.csv`, `metacritic_movies.csv` and `rt_movies.csv` respectively. We'll need these files to pass through the `data_cleaner.py` script in order for the other data analysis python files to work properly.
+
+### Machine Learning Analysis
+
+> [!IMPORTANT]
+> Make sure all of the previous steps are completed properly! The following python script will rely on the `data_cleaner.py` script to process and return cleaned dataframes for use!
+
+In this question, we hope to answer the following: ***Do aggregated reviews from multiple sources provide a better predictor of a movie's overall success than individual platform scores?***
+
+You may run the Machine Learning Analysis script to discover the results. Run `python3 ml_analysis.py` if you're using the default python interpreter or `python ml_analysis.py` if you're using Anaconda.
+It will output prints of the accuracy scores of each model created for each platform, including an aggregated dataframe that averages all of the scores. The closer the value to `1`, the higher the accuracy as a predictor towards a movie's success.
