@@ -21,6 +21,7 @@ You can install these dependencies using `pip`:
 
 ```bash
 pip install numpy pandas scikit-learn matplotlib seaborn scipy statsmodels
+```
 
 
 Addtionally, you may clone the repository onto your own directory. Make sure that both `rt_movies.csv` and `imdb_uncleaned.csv` are present, as they are the raw datasets that we're working with in this project.
