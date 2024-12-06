@@ -31,6 +31,7 @@ Now, there should be a total of 3 `.csv` files within the repository, and they s
 > Make sure all of the previous steps are completed properly! The following python script will rely on the `data_cleaner.py` script to process and return cleaned dataframes for use!
 
 In this question, we hope to answer the following: ***Are there statistically significant differences in ratings between platforms like Rotten Tomatoes, IMDb, and Metacritic for the same movie?***
+
 You may run the Statistical Analysis script to discover the results. Run `python3 stat_analysis.py` if you're using the default python interpreter or `python stat_analysis.py` if you're using Anaconda.
 It will output the statistical analysis results, including the ANOVA test and p-values comparing ratings across IMDb, Metacritic, and Rotten Tomatoes, along with post-hoc Tukey's HSD test results if significant differences are found. Additionally, t-tests will compare ratings between specific platforms, and graphical representations of the rating distributions will be displayed using box and bar plots.
 
