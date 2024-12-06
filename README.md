@@ -6,10 +6,21 @@ This project will focus on three difference sources that displays metadata about
 
 ## Step 0.5 - Installing Prerequisites
 
-- **Python 3.0 or HIGHER**
-- **Numpy** - Python module required as a dependency for pandas
-- **Pandas** - Python module required for dataframe work
-- **sklearn** - Python module required for machine learning analysis
+Before running the script, ensure that you have the following prerequisites installed:
+
+- **Python 3.0 or HIGHER**: Make sure you are using Python version 3.0 or higher.
+- **Numpy**: Python module required as a dependency for pandas. It handles numerical computations and array operations.
+- **Pandas**: Python module required for working with dataframes and data manipulation.
+- **sklearn**: Python module required for machine learning analysis, providing various algorithms for analysis.
+- **Matplotlib**: For data visualization and plotting graphs.
+- **Seaborn**: A data visualization library based on Matplotlib for enhanced visuals.
+- **Scipy**: For statistical tests and computations.
+- **Statsmodels**: For statistical modeling, including tests like Tukey's HSD.
+
+You can install these dependencies using `pip`:
+
+```bash
+pip install numpy pandas scikit-learn matplotlib seaborn scipy statsmodels
 
 Addtionally, you may clone the repository onto your own directory. Make sure that both `rt_movies.csv` and `imdb_uncleaned.csv` are present, as they are the raw datasets that we're working with in this project.
 
